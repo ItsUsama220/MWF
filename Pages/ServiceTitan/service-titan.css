@@ -1,0 +1,446 @@
+.mwf-service-titan-page {
+  --mwf-page-backdrop-shift: 0px;
+}
+
+.mwf-service-titan-hero {
+  position: relative;
+  overflow: clip;
+  padding-top: calc(var(--mwf-header-offset) + clamp(14px, 2.4vw, 30px));
+  background: var(--mwf-hero-atmosphere);
+  color: var(--mwf-text);
+}
+
+.mwf-service-titan-hero__shell {
+  align-items: center;
+  gap: clamp(28px, 4vw, 44px);
+  padding-top: clamp(72px, 9vw, 120px);
+}
+
+.mwf-service-titan-hero__intro,
+.mwf-service-titan-badge-card,
+.mwf-service-titan-proof__intro,
+.mwf-service-titan-video-card,
+.mwf-service-titan-pillar-card,
+.mwf-service-titan-story__panel,
+.mwf-service-titan-photo-placeholder,
+.mwf-service-titan-cta__panel,
+.mwf-service-titan-cta__rail {
+  opacity: 0;
+}
+
+.mwf-service-titan-hero__intro {
+  display: grid;
+  align-content: start;
+  gap: var(--mwf-content-gap);
+}
+
+.mwf-service-titan-hero__intro .mwf-section-title {
+  max-width: 10ch;
+}
+
+.mwf-service-titan-hero__intro .mwf-copy-stack {
+  max-width: 40rem;
+}
+
+.mwf-service-titan-hero .mwf-section-eyebrow,
+.mwf-service-titan-hero .mwf-section-title,
+.mwf-service-titan-hero .mwf-section-copy {
+  color: var(--mwf-text);
+}
+
+.mwf-service-titan-hero .mwf-section-title {
+  font-size: clamp(2.45rem, 5vw, 4.1rem);
+  line-height: var(--mwf-heading-leading-display);
+  text-transform: uppercase;
+}
+
+.mwf-service-titan-hero .mwf-copy-stack p {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.78);
+}
+
+.mwf-service-titan-badge-card {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  padding: clamp(24px, 3vw, 34px);
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.mwf-service-titan-badge-card::after {
+  content: "";
+  position: absolute;
+  right: -18%;
+  bottom: -24%;
+  width: min(280px, 42%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(160, 44, 44, 0.32), transparent 66%);
+  filter: blur(16px);
+  opacity: 0.7;
+}
+
+.mwf-service-titan-badge-card__brand,
+.mwf-service-titan-badge-card__copy {
+  position: relative;
+  z-index: 1;
+}
+
+.mwf-service-titan-badge-card__brand img {
+  display: block;
+  width: min(100%, 360px);
+}
+
+.mwf-service-titan-badge-card__copy {
+  display: grid;
+  gap: 10px;
+  max-width: 30rem;
+}
+
+.mwf-service-titan-badge-card__copy strong {
+  font-size: clamp(1.14rem, 2vw, 1.46rem);
+  line-height: 1.35;
+}
+
+.mwf-service-titan-proof {
+  background:
+    radial-gradient(circle at 22% 18%, rgba(63, 91, 127, 0.2), transparent 24%),
+    linear-gradient(180deg, rgba(12, 21, 38, 0.98), rgba(7, 12, 22, 1));
+}
+
+.mwf-service-titan-proof__intro {
+  text-align: center;
+}
+
+.mwf-service-titan-proof__intro .mwf-section-title,
+.mwf-service-titan-proof__intro .mwf-section-copy {
+  margin-inline: auto;
+}
+
+.mwf-service-titan-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 28px);
+}
+
+.mwf-service-titan-video-card {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 30px;
+  color: var(--mwf-text);
+}
+
+.mwf-service-titan-video-card__visual {
+  position: relative;
+  min-height: clamp(240px, 28vw, 330px);
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 74% 24%, rgba(255, 255, 255, 0.28), transparent 12%),
+    radial-gradient(circle at 58% 44%, rgba(160, 44, 44, 0.22), transparent 18%),
+    linear-gradient(180deg, rgba(26, 34, 48, 0.24), rgba(8, 14, 24, 0.72)),
+    linear-gradient(135deg, rgba(66, 82, 111, 0.92), rgba(26, 31, 44, 0.98));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.mwf-service-titan-video-card__visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 36%),
+    radial-gradient(circle at 34% 74%, rgba(255, 255, 255, 0.08), transparent 18%);
+}
+
+.mwf-service-titan-video-card__visual::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 36%;
+  background: linear-gradient(180deg, transparent, rgba(4, 8, 16, 0.78));
+}
+
+.mwf-service-titan-video-card__visual--alt {
+  background:
+    radial-gradient(circle at 74% 24%, rgba(255, 255, 255, 0.28), transparent 12%),
+    radial-gradient(circle at 34% 40%, rgba(63, 91, 127, 0.28), transparent 18%),
+    linear-gradient(180deg, rgba(26, 34, 48, 0.24), rgba(8, 14, 24, 0.72)),
+    linear-gradient(135deg, rgba(113, 43, 43, 0.94), rgba(28, 36, 52, 0.98));
+}
+
+.mwf-service-titan-video-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(211, 49, 49, 0.92);
+  transform: translate(-50%, -50%);
+  box-shadow:
+    0 16px 30px rgba(3, 8, 18, 0.3),
+    0 0 28px rgba(211, 49, 49, 0.32);
+}
+
+.mwf-service-titan-video-card__play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid #fff;
+  transform: translate(-35%, -50%);
+}
+
+.mwf-service-titan-video-card__chip {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 1;
+  padding: 0.48rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(9, 17, 29, 0.72);
+  color: rgba(247, 245, 242, 0.92);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mwf-service-titan-video-card__meta {
+  display: grid;
+  gap: 10px;
+}
+
+.mwf-service-titan-video-card__meta h2 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  line-height: var(--mwf-heading-leading);
+  letter-spacing: -0.05em;
+}
+
+.mwf-service-titan-video-card__meta p {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.76);
+  line-height: 1.65;
+}
+
+.mwf-service-titan-pillars {
+  background:
+    radial-gradient(circle at 24% 16%, rgba(63, 91, 127, 0.24), transparent 24%),
+    linear-gradient(180deg, rgba(28, 46, 69, 0.98), rgba(18, 31, 47, 1));
+}
+
+.mwf-service-titan-pillars__intro {
+  max-width: 780px;
+}
+
+.mwf-service-titan-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.mwf-service-titan-pillar-card {
+  min-height: 100%;
+  padding: 26px;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.mwf-service-titan-pillar-card .mwf-section-eyebrow {
+  margin: 0;
+}
+
+.mwf-service-titan-pillar-card h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2vw, 1.86rem);
+  line-height: var(--mwf-heading-leading);
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.mwf-service-titan-pillar-card p:last-child {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.82);
+  line-height: 1.68;
+}
+
+.mwf-service-titan-story {
+  background:
+    radial-gradient(circle at 78% 16%, rgba(63, 91, 127, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(8, 14, 24, 0.98), rgba(6, 9, 18, 1));
+}
+
+.mwf-service-titan-story__shell {
+  align-items: stretch;
+}
+
+.mwf-service-titan-photo-placeholder {
+  min-height: clamp(380px, 42vw, 560px);
+}
+
+.mwf-service-titan-photo-placeholder__frame {
+  position: relative;
+  min-height: inherit;
+  height: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  border: var(--mwf-glass-border);
+  background:
+    radial-gradient(circle at 22% 22%, rgba(247, 245, 242, 0.12), transparent 12%),
+    radial-gradient(circle at 72% 28%, rgba(160, 44, 44, 0.18), transparent 20%),
+    linear-gradient(145deg, rgba(28, 43, 64, 0.96), rgba(14, 20, 31, 0.98));
+  box-shadow:
+    0 24px 46px rgba(3, 8, 18, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.mwf-service-titan-photo-placeholder__frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 28%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 48%);
+}
+
+.mwf-service-titan-photo-placeholder__frame::after {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: 24px;
+  border: 1px dashed rgba(247, 245, 242, 0.22);
+}
+
+.mwf-service-titan-photo-placeholder__badge {
+  position: absolute;
+  left: 26px;
+  bottom: 26px;
+  z-index: 1;
+  padding: 0.7rem 0.9rem;
+  border-radius: 18px;
+  background: rgba(10, 16, 28, 0.72);
+  color: rgba(247, 245, 242, 0.94);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mwf-service-titan-story__panel,
+.mwf-service-titan-cta__panel {
+  padding: clamp(28px, 3vw, 40px);
+  border-radius: 30px;
+}
+
+.mwf-service-titan-story__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mwf-service-titan-story__panel .mwf-section-title {
+  max-width: 12ch;
+}
+
+.mwf-service-titan-story__panel a {
+  color: #f7f5f2;
+}
+
+.mwf-service-titan-reviews {
+  background:
+    radial-gradient(circle at 84% 14%, rgba(63, 91, 127, 0.16), transparent 22%),
+    linear-gradient(180deg, rgba(8, 14, 24, 0.98), rgba(6, 9, 18, 1));
+}
+
+.mwf-service-titan-cta {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(160, 44, 44, 0.16), transparent 20%),
+    linear-gradient(180deg, rgba(13, 20, 34, 0.98), rgba(7, 12, 22, 1));
+}
+
+.mwf-service-titan-cta__shell {
+  justify-items: center;
+}
+
+.mwf-service-titan-cta__panel .mwf-section-title {
+  max-width: 11ch;
+}
+
+.mwf-service-titan-cta__panel {
+  width: min(100%, 840px);
+  text-align: center;
+}
+
+.mwf-service-titan-cta__panel .mwf-section-title,
+.mwf-service-titan-cta__panel .mwf-copy-stack p {
+  margin-inline: auto;
+}
+
+.mwf-service-titan-cta__panel .mwf-hero-ionyx__actions {
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .mwf-service-titan-hero__shell,
+  .mwf-service-titan-proof__grid,
+  .mwf-service-titan-pillars__grid,
+  .mwf-service-titan-story__shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .mwf-service-titan-hero {
+    padding-top: calc(var(--mwf-header-offset) + 28px);
+  }
+
+  .mwf-service-titan-hero__shell {
+    padding-top: clamp(28px, 3vw, 42px);
+  }
+
+  .mwf-service-titan-badge-card,
+  .mwf-service-titan-video-card,
+  .mwf-service-titan-pillar-card,
+  .mwf-service-titan-story__panel,
+  .mwf-service-titan-cta__panel {
+    border-radius: 24px;
+  }
+
+  .mwf-service-titan-video-card__visual,
+  .mwf-service-titan-photo-placeholder__frame {
+    border-radius: 20px;
+  }
+
+  .mwf-service-titan-video-card__visual {
+    min-height: 220px;
+  }
+
+  .mwf-service-titan-photo-placeholder {
+    min-height: 300px;
+  }
+
+  .mwf-service-titan-cta__panel .mwf-hero-ionyx__actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mwf-service-titan-hero__intro,
+  .mwf-service-titan-badge-card,
+  .mwf-service-titan-proof__intro,
+  .mwf-service-titan-video-card,
+  .mwf-service-titan-pillar-card,
+  .mwf-service-titan-story__panel,
+  .mwf-service-titan-photo-placeholder,
+  .mwf-service-titan-cta__panel {
+    opacity: 1;
+  }
+}

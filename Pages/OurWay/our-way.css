@@ -1,0 +1,353 @@
+body[data-page="work"] {
+  background:
+    radial-gradient(circle at top left, rgba(63, 91, 127, 0.2), transparent 28%),
+    linear-gradient(180deg, #060912, #050810);
+}
+
+.mwf-our-way-page {
+  position: relative;
+}
+
+.mwf-our-way-hero {
+  position: relative;
+  overflow: clip;
+  padding-top: calc(var(--mwf-header-offset) + clamp(14px, 2.4vw, 30px));
+  background: var(--mwf-hero-atmosphere);
+}
+
+.mwf-our-way-hero__shell,
+.mwf-our-way-story__shell,
+.mwf-our-way-sacrifice__shell,
+.mwf-our-way-program__shell,
+.mwf-our-way-purpose__shell,
+.mwf-our-way-contact__shell {
+  align-items: stretch;
+}
+
+.mwf-our-way-hero__shell {
+  grid-template-columns: 1fr;
+  padding-top: clamp(72px, 9vw, 120px);
+  padding-bottom: clamp(54px, 6vw, 84px);
+  justify-items: center;
+}
+
+.mwf-our-way-hero__content {
+  max-width: 1100px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.mwf-our-way-hero__content .mwf-section-title {
+  max-width: 13ch;
+  margin-inline: auto;
+  font-size: clamp(3rem, 6.4vw, 5.35rem);
+  line-height: var(--mwf-heading-leading-display);
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.mwf-our-way-hero__content .mwf-copy-stack {
+  gap: 18px;
+}
+
+.mwf-our-way-hero__content .mwf-copy-stack p {
+  max-width: 44rem;
+  font-size: clamp(1.04rem, 1.22vw, 1.16rem);
+  line-height: var(--mwf-body-leading);
+  margin-inline: auto;
+}
+
+.mwf-our-way-hero__actions {
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.mwf-our-way-story {
+  background:
+    radial-gradient(circle at 22% 16%, rgba(63, 91, 127, 0.18), transparent 22%),
+    linear-gradient(180deg, rgba(18, 30, 48, 0.98), rgba(10, 17, 29, 1));
+}
+
+.mwf-our-way-sacrifice,
+.mwf-our-way-purpose {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
+    linear-gradient(180deg, rgba(157, 45, 45, 0.98), rgba(121, 32, 32, 1));
+}
+
+.mwf-our-way-program {
+  background:
+    radial-gradient(circle at 20% 24%, rgba(63, 91, 127, 0.14), transparent 22%),
+    linear-gradient(180deg, rgba(16, 27, 43, 0.98), rgba(9, 16, 28, 1));
+  color: var(--mwf-text);
+}
+
+.mwf-our-way-program .mwf-section-eyebrow,
+.mwf-our-way-program .mwf-contact-row__label {
+  color: rgba(247, 245, 242, 0.68);
+}
+
+.mwf-our-way-program .mwf-section-title,
+.mwf-our-way-program .mwf-section-copy,
+.mwf-our-way-program .mwf-copy-stack p,
+.mwf-our-way-program .mwf-our-way-inline-link,
+.mwf-our-way-program .mwf-our-way-list li {
+  color: var(--mwf-text);
+}
+
+.mwf-our-way-story__content,
+.mwf-our-way-sacrifice__content,
+.mwf-our-way-program__content,
+.mwf-our-way-purpose__content {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-content: start;
+  gap: var(--mwf-content-gap);
+  height: 100%;
+  padding: clamp(24px, 3vw, 34px);
+  border: var(--mwf-glass-border);
+  border-radius: 30px;
+  background: var(--mwf-glass-fill);
+  box-shadow: var(--mwf-glass-shadow);
+  backdrop-filter: blur(20px) saturate(132%);
+  -webkit-backdrop-filter: blur(20px) saturate(132%);
+}
+
+.mwf-our-way-story__content::before,
+.mwf-our-way-sacrifice__content::before,
+.mwf-our-way-program__content::before,
+.mwf-our-way-purpose__content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--mwf-glass-highlight);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.mwf-our-way-story__content > *,
+.mwf-our-way-sacrifice__content > *,
+.mwf-our-way-program__content > *,
+.mwf-our-way-purpose__content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mwf-our-way-story__content .mwf-copy-stack p,
+.mwf-our-way-sacrifice__content .mwf-copy-stack p,
+.mwf-our-way-program__content .mwf-copy-stack p,
+.mwf-our-way-purpose__content .mwf-copy-stack p {
+  max-width: 39rem;
+}
+
+.mwf-our-way-story__visual,
+.mwf-our-way-sacrifice__visual,
+.mwf-our-way-purpose__visual,
+.mwf-our-way-contact__visual {
+  display: flex;
+  min-width: 0;
+}
+
+.mwf-our-way-story__visual > *,
+.mwf-our-way-sacrifice__visual > *,
+.mwf-our-way-purpose__visual > *,
+.mwf-our-way-contact__visual > * {
+  flex: 1 1 auto;
+}
+
+.mwf-our-way-media-card,
+.mwf-our-way-media-card .mwf-media-placeholder__image,
+.mwf-our-way-flag__frame,
+.mwf-our-way-flag__frame .mwf-media-placeholder__image {
+  height: 100%;
+}
+
+.mwf-our-way-media-card {
+  min-height: 100%;
+}
+
+.mwf-our-way-story__visual .mwf-our-way-media-card,
+.mwf-our-way-sacrifice__visual .mwf-our-way-media-card,
+.mwf-our-way-purpose__visual .mwf-our-way-media-card,
+.mwf-our-way-contact__visual .mwf-our-way-media-card {
+  min-height: 420px;
+}
+
+.mwf-our-way-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.mwf-our-way-list li {
+  line-height: var(--mwf-body-leading);
+}
+
+.mwf-our-way-inline-link {
+  color: rgba(247, 245, 242, 0.96);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.mwf-our-way-program .mwf-our-way-inline-link {
+  color: #18253a;
+}
+
+.mwf-our-way-inline-link:hover,
+.mwf-our-way-inline-link:focus-visible {
+  color: #ffffff;
+}
+
+.mwf-our-way-program .mwf-our-way-inline-link:hover,
+.mwf-our-way-program .mwf-our-way-inline-link:focus-visible {
+  color: #ffffff;
+}
+
+.mwf-our-way-quote {
+  margin: 0;
+  padding-left: 18px;
+  border-left: 2px solid rgba(247, 245, 242, 0.34);
+  color: rgba(247, 245, 242, 0.96);
+  font-size: clamp(1rem, 1.22vw, 1.14rem);
+  line-height: var(--mwf-body-leading);
+  font-style: italic;
+}
+
+.mwf-our-way-quote__attribution {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.74);
+  font-weight: 700;
+}
+
+.mwf-our-way-logo-card {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 420px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(63, 91, 127, 0.18), transparent 24%),
+    linear-gradient(160deg, rgba(21, 34, 54, 0.86), rgba(10, 17, 29, 0.92)),
+    var(--mwf-glass-fill);
+}
+
+.mwf-our-way-logo-card img {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+}
+
+.mwf-our-way-flag {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(63, 91, 127, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(22, 35, 54, 1), rgba(14, 24, 39, 1));
+}
+
+.mwf-our-way-flag__figure {
+  display: grid;
+  gap: 24px;
+}
+
+.mwf-our-way-flag__frame {
+  min-height: 540px;
+}
+
+.mwf-our-way-flag__caption-wrap {
+  display: grid;
+  gap: 10px;
+  max-width: 760px;
+}
+
+.mwf-our-way-flag__caption-wrap .mwf-section-title {
+  max-width: 12ch;
+}
+
+.mwf-our-way-flag__caption {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.76);
+  line-height: var(--mwf-body-leading);
+}
+
+.mwf-our-way-contact__panel {
+  display: grid;
+  align-content: start;
+  height: 100%;
+}
+
+.mwf-our-way-contact__rows {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.mwf-our-way-contact__visual .mwf-our-way-media-card {
+  min-height: 420px;
+}
+
+@media (max-width: 1100px) {
+  .mwf-our-way-story__shell,
+  .mwf-our-way-sacrifice__shell,
+  .mwf-our-way-program__shell,
+  .mwf-our-way-purpose__shell,
+  .mwf-our-way-contact__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .mwf-our-way-flag__frame {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 820px) {
+  .mwf-our-way-story__visual .mwf-our-way-media-card,
+  .mwf-our-way-sacrifice__visual .mwf-our-way-media-card,
+  .mwf-our-way-purpose__visual .mwf-our-way-media-card,
+  .mwf-our-way-contact__visual .mwf-our-way-media-card,
+  .mwf-our-way-logo-card {
+    min-height: 360px;
+  }
+
+  .mwf-our-way-flag__frame {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mwf-our-way-hero {
+    padding-top: calc(var(--mwf-header-offset) + 28px);
+  }
+
+  .mwf-our-way-story__content,
+  .mwf-our-way-sacrifice__content,
+  .mwf-our-way-program__content,
+  .mwf-our-way-purpose__content {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .mwf-our-way-story__visual .mwf-our-way-media-card,
+  .mwf-our-way-sacrifice__visual .mwf-our-way-media-card,
+  .mwf-our-way-purpose__visual .mwf-our-way-media-card,
+  .mwf-our-way-contact__visual .mwf-our-way-media-card,
+  .mwf-our-way-logo-card,
+  .mwf-our-way-flag__frame {
+    min-height: 300px;
+  }
+
+  .mwf-our-way-logo-card {
+    padding: 22px;
+  }
+
+  .mwf-our-way-quote {
+    padding-left: 14px;
+  }
+}

@@ -1,0 +1,412 @@
+body[data-page="about"] {
+  background:
+    radial-gradient(circle at top left, rgba(63, 91, 127, 0.22), transparent 28%),
+    linear-gradient(180deg, #060912, #050810);
+}
+
+.mwf-about-page {
+  position: relative;
+}
+
+.mwf-about-hero {
+  position: relative;
+  overflow: clip;
+  padding-top: calc(var(--mwf-header-offset) + clamp(14px, 2.4vw, 30px));
+  background: var(--mwf-hero-atmosphere);
+}
+
+.mwf-about-hero__backdrop,
+.mwf-about-hero__backdrop > * {
+  pointer-events: none;
+}
+
+.mwf-about-hero__backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.mwf-about-hero__beam,
+.mwf-about-hero__glow {
+  position: absolute;
+}
+
+.mwf-about-hero__beam {
+  display: none;
+}
+
+.mwf-about-hero__glow {
+  right: 8%;
+  bottom: 8%;
+  width: clamp(220px, 34vw, 460px);
+  height: clamp(220px, 34vw, 460px);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(63, 91, 127, 0.34), transparent 58%),
+    radial-gradient(circle at 66% 30%, rgba(160, 44, 44, 0.18), transparent 30%);
+  filter: blur(42px);
+  opacity: 0.78;
+}
+
+.mwf-about-hero__shell,
+.mwf-about-story__shell,
+.mwf-about-expertise__shell,
+.mwf-about-contact__shell,
+.mwf-about-legacy__shell {
+  align-items: stretch;
+}
+
+.mwf-about-hero__shell {
+  padding-top: clamp(72px, 9vw, 120px);
+  padding-bottom: clamp(54px, 6vw, 84px);
+}
+
+.mwf-about-hero__content .mwf-section-title {
+  max-width: 11ch;
+}
+
+.mwf-about-hero__content .mwf-copy-stack p {
+  max-width: 44rem;
+  font-size: clamp(1rem, 1.22vw, 1.12rem);
+  line-height: var(--mwf-body-leading);
+}
+
+.mwf-about-hero__actions {
+  margin-top: 32px;
+}
+
+.mwf-about-hero__visual,
+.mwf-about-story__media,
+.mwf-about-contact__visual {
+  display: flex;
+  min-width: 0;
+}
+
+.mwf-about-hero-card,
+.mwf-about-hero-card img,
+.mwf-about-story-card,
+.mwf-about-story-card .mwf-media-placeholder__image,
+.mwf-about-expertise__media,
+.mwf-about-expertise__media .mwf-media-placeholder__image,
+.mwf-about-contact__visual .mwf-media-placeholder,
+.mwf-about-contact__visual .mwf-media-placeholder__image {
+  height: 100%;
+}
+
+.mwf-about-hero__visual > *,
+.mwf-about-story__media > *,
+.mwf-about-contact__visual > * {
+  flex: 1 1 auto;
+}
+
+.mwf-about-hero-card {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 34px;
+}
+
+.mwf-about-hero-card img {
+  display: block;
+  width: 100%;
+  min-height: 430px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.mwf-about-hero-card__meta {
+  display: grid;
+  gap: 8px;
+}
+
+.mwf-about-section-intro {
+  max-width: 860px;
+}
+
+.mwf-about-section-intro .mwf-section-title {
+  max-width: 14ch;
+}
+
+.mwf-about-section-intro--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.mwf-about-section-intro--center .mwf-section-title {
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+.mwf-about-leadership__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.mwf-about-bio-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mwf-about-bio-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+.mwf-about-bio-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mwf-about-bio-card__body {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 24px;
+}
+
+.mwf-about-bio-card__body h3 {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.3vw, 2.1rem);
+  line-height: var(--mwf-heading-leading);
+  letter-spacing: -0.04em;
+}
+
+.mwf-about-bio-card__body p {
+  margin: 0;
+}
+
+.mwf-about-inline-link {
+  color: rgba(247, 245, 242, 0.92);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.mwf-about-inline-link:hover,
+.mwf-about-inline-link:focus-visible {
+  color: #ffffff;
+}
+
+.mwf-about-story__panel .mwf-copy-stack p,
+.mwf-about-legacy__content .mwf-copy-stack p,
+.mwf-about-expertise__panel .mwf-copy-stack p {
+  max-width: 38rem;
+}
+
+.mwf-about-story__media {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 18px;
+  height: 100%;
+}
+
+.mwf-about-story-card {
+  min-height: 0;
+}
+
+.mwf-about-story__badge {
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  min-height: 180px;
+}
+
+.mwf-about-story__badge img {
+  display: block;
+  width: min(100%, 220px);
+  height: auto;
+}
+
+.mwf-about-legacy {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(247, 245, 242, 0.06), transparent 20%),
+    linear-gradient(180deg, rgba(149, 40, 40, 0.96), rgba(116, 31, 31, 1));
+}
+
+.mwf-about-legacy__content .mwf-section-eyebrow,
+.mwf-about-values .mwf-section-eyebrow {
+  color: rgba(247, 245, 242, 0.78);
+}
+
+.mwf-about-legacy__content .mwf-copy-stack p {
+  color: rgba(247, 245, 242, 0.92);
+}
+
+.mwf-about-legacy__badge {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 320px;
+  padding: 26px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(247, 245, 242, 0.12), transparent 26%),
+    linear-gradient(160deg, rgba(18, 28, 46, 0.72), rgba(11, 17, 29, 0.84)),
+    var(--mwf-glass-fill);
+}
+
+.mwf-about-legacy__badge img {
+  display: block;
+  width: min(100%, 260px);
+  height: auto;
+}
+
+.mwf-about-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mwf-about-gallery__item {
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.mwf-about-gallery__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mwf-about-gallery__item:hover img,
+.mwf-about-gallery__item:focus-within img {
+  transform: scale(1.04);
+}
+
+.mwf-about-values {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.06), transparent 22%),
+    linear-gradient(180deg, rgba(152, 42, 42, 0.98), rgba(116, 31, 31, 1));
+}
+
+.mwf-about-values__shell {
+  gap: 22px;
+  justify-items: center;
+  text-align: center;
+}
+
+.mwf-about-values__content {
+  max-width: 900px;
+}
+
+.mwf-about-values__content .mwf-section-title {
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+.mwf-about-expertise__media {
+  height: 100%;
+  min-height: 420px;
+}
+
+.mwf-about-expertise__panel {
+  display: grid;
+  align-content: start;
+  gap: var(--mwf-content-gap);
+  height: 100%;
+}
+
+.mwf-about-expertise__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 22px;
+}
+
+.mwf-about-contact__panel .mwf-section-copy {
+  max-width: 36rem;
+}
+
+.mwf-about-contact__panel {
+  display: grid;
+  align-content: start;
+  height: 100%;
+}
+
+.mwf-about-contact__rows {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.mwf-about-contact__visual .mwf-media-placeholder {
+  height: 100%;
+  min-height: 420px;
+}
+
+@media (max-width: 1100px) {
+  .mwf-about-hero__shell,
+  .mwf-about-story__shell,
+  .mwf-about-legacy__shell,
+  .mwf-about-expertise__shell,
+  .mwf-about-contact__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .mwf-about-hero__visual {
+    max-width: 720px;
+  }
+
+  .mwf-about-story__media {
+    grid-template-rows: auto auto;
+  }
+
+  .mwf-about-legacy__badge {
+    min-height: 260px;
+    max-width: 420px;
+  }
+
+  .mwf-about-gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .mwf-about-leadership__grid,
+  .mwf-about-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mwf-about-story-card,
+  .mwf-about-expertise__media,
+  .mwf-about-contact__visual .mwf-media-placeholder {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mwf-about-hero {
+    padding-top: calc(var(--mwf-header-offset) + 28px);
+  }
+
+  .mwf-about-hero-card {
+    padding: 14px;
+    border-radius: 28px;
+  }
+
+  .mwf-about-hero-card img,
+  .mwf-about-bio-card__media,
+  .mwf-about-story-card,
+  .mwf-about-expertise__media,
+  .mwf-about-contact__visual .mwf-media-placeholder {
+    min-height: 300px;
+  }
+
+  .mwf-about-bio-card__body,
+  .mwf-about-story__badge,
+  .mwf-about-legacy__badge {
+    padding: 20px;
+  }
+
+  .mwf-about-expertise__links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

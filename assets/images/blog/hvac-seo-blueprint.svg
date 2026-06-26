@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">HVAC SEO Blueprint</title>
+  <desc id="desc">Abstract navy marketing graphic with search grid motifs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#101a2b"/>
+      <stop offset="55%" stop-color="#132238"/>
+      <stop offset="100%" stop-color="#531d24"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="28%" r="60%">
+      <stop offset="0%" stop-color="#45648c" stop-opacity=".75"/>
+      <stop offset="100%" stop-color="#45648c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="960" fill="url(#bg)"/>
+  <rect width="1600" height="960" fill="url(#glow)"/>
+  <g fill="none" stroke="#f7f5f2" stroke-opacity=".13">
+    <path d="M110 150h560v320H110z"/>
+    <path d="M160 210h460"/>
+    <path d="M160 280h300"/>
+    <path d="M160 350h390"/>
+    <path d="M160 420h240"/>
+    <path d="M760 170h620v620H760z"/>
+    <path d="M820 280h500"/>
+    <path d="M820 370h380"/>
+    <path d="M820 460h460"/>
+    <path d="M820 550h290"/>
+  </g>
+  <circle cx="1170" cy="430" r="210" fill="#a02c2c" fill-opacity=".18"/>
+  <circle cx="1170" cy="430" r="150" fill="#f7f5f2" fill-opacity=".06"/>
+  <path d="M1030 700c95-80 225-104 375-73" fill="none" stroke="#f7f5f2" stroke-opacity=".2" stroke-width="14" stroke-linecap="round"/>
+  <text x="110" y="760" fill="#f7f5f2" font-family="Arial, sans-serif" font-size="86" font-weight="700" letter-spacing="-2">HVAC SEO Blueprint</text>
+  <text x="110" y="835" fill="#f7f5f2" fill-opacity=".72" font-family="Arial, sans-serif" font-size="34">Search Visibility | Conversion Structure | Local Proof</text>
+</svg>
