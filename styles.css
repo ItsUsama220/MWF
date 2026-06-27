@@ -1753,18 +1753,20 @@ body.mwf-menu-open {
     display: flex;
     align-items: center;
     gap: 16px;
-    flex: 0 0 var(--mwf-marquee-set-width, 100%);
-    width: var(--mwf-marquee-set-width, 100%);
+    flex: 0 0 auto;
+    width: max-content;
   }
 
   .mwf-marquee-item {
-    flex: 0 0 100%;
+    flex: 0 0 clamp(132px, 34vw, 156px);
     min-height: 124px;
-    width: 100%;
+    width: clamp(132px, 34vw, 156px);
+    padding-inline: 10px;
   }
 
   .mwf-marquee-item__logo {
-    max-width: min(78vw, 220px);
+    width: 100%;
+    max-width: none;
     max-height: 100px;
   }
 
