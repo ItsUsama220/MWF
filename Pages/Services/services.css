@@ -85,8 +85,9 @@
 
 .mwf-services-story--red {
   background:
-    radial-gradient(circle at 14% 20%, rgba(247, 245, 242, 0.08), transparent 20%),
-    linear-gradient(180deg, rgba(98, 26, 28, 0.98), rgba(76, 17, 20, 1));
+    radial-gradient(circle at 18% 22%, rgba(63, 91, 127, 0.2), transparent 24%),
+    radial-gradient(circle at 82% 76%, rgba(247, 245, 242, 0.04), transparent 22%),
+    linear-gradient(180deg, rgba(12, 21, 37, 0.98), rgba(8, 14, 25, 1));
 }
 
 .mwf-services-story__panel,
@@ -197,16 +198,17 @@
 
 .mwf-map-feature {
   background:
-    radial-gradient(circle at 50% 12%, rgba(160, 44, 44, 0.08), transparent 18%),
-    linear-gradient(180deg, rgba(245, 241, 235, 0.98), rgba(232, 228, 223, 1));
-  color: #132238;
+    radial-gradient(circle at 50% 10%, rgba(63, 91, 127, 0.18), transparent 18%),
+    radial-gradient(circle at 14% 72%, rgba(247, 245, 242, 0.04), transparent 20%),
+    linear-gradient(180deg, rgba(11, 21, 38, 0.98), rgba(7, 12, 22, 1));
+  color: var(--mwf-text);
 }
 
 .mwf-map-feature .mwf-section-eyebrow,
 .mwf-map-feature .mwf-section-copy,
 .mwf-map-feature .mwf-map-feature__subhead,
 .mwf-map-feature .mwf-section-title {
-  color: #132238;
+  color: var(--mwf-text);
 }
 
 .mwf-map-feature__shell {
@@ -249,7 +251,7 @@
 
 .mwf-map-feature .mwf-services-media__frame {
   background:
-    linear-gradient(180deg, rgba(204, 216, 228, 0.95), rgba(234, 238, 244, 0.98)),
+    linear-gradient(180deg, rgba(199, 210, 225, 0.92), rgba(225, 231, 239, 0.95)),
     linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.06));
 }
 
