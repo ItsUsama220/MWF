@@ -456,6 +456,7 @@ const initContinuationAnimations = () => {
   continuation.dataset.continuationReady = 'true';
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobileViewport = window.matchMedia('(max-width: 767px)').matches;
   const canAnimate = Boolean(window.gsap && window.ScrollTrigger && !prefersReducedMotion);
 
   if (!canAnimate) {
@@ -489,8 +490,10 @@ const initContinuationAnimations = () => {
       filter = 'blur(10px)'
     } = config;
 
+    const startX = isMobileViewport ? 0 : x;
+
     gsap.set(items, {
-      x,
+      x: startX,
       y,
       scale,
       opacity: 0,
