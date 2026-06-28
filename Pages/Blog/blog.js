@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const post = blogs.find((item) => item.slug === slug) || blogs[0];
   const relatedPosts = blogs.filter((item) => item.slug !== post.slug).slice(0, 3);
   const contentSections = Array.isArray(post.sections) ? post.sections : (Array.isArray(post.blueprint) ? post.blueprint : []);
-  const sectionIds = contentSections.map((section, index) => `mwf-blog-section-${index + 1}`);
   const renderSectionMedia = (media) => {
     if (!media || !media.src) {
       return '';
@@ -46,29 +45,33 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 
+  const renderedSections = post.articleHtml
+    ? `<div class="mwf-blog-article__sections mwf-blog-article__sections--imported">${post.articleHtml}</div>`
+    : `<div class="mwf-blog-article__sections">
+        ${contentSections.map((section, index) => `
+          <section class="mwf-blog-article__section" id="mwf-blog-section-${index + 1}" data-page-reveal data-reveal-y="14">
+            <div class="mwf-blog-article__section-copy">
+              <h2>${section.heading}</h2>
+              ${(section.copy || []).map((paragraph) => `<p>${paragraph}</p>`).join('')}
+              ${section.checklist && section.checklist.length ? `
+                <ul>
+                  ${section.checklist.map((item) => `<li>${item}</li>`).join('')}
+                </ul>
+              ` : ''}
+            </div>
+            ${renderSectionMedia(section.media)}
+          </section>
+        `).join('')}
+      </div>`;
+
   articleMain.innerHTML = `
     <div class="mwf-blog-article__lede" data-page-reveal data-reveal-y="12">
       ${(post.intro || []).map((paragraph) => `<p>${paragraph}</p>`).join('')}
     </div>
-    <div class="mwf-blog-article__sections">
-      ${contentSections.map((section, index) => `
-        <section class="mwf-blog-article__section" id="${sectionIds[index]}" data-page-reveal data-reveal-y="14">
-          <div class="mwf-blog-article__section-copy">
-            <h2>${section.heading}</h2>
-            ${(section.copy || []).map((paragraph) => `<p>${paragraph}</p>`).join('')}
-            ${section.checklist && section.checklist.length ? `
-              <ul>
-                ${section.checklist.map((item) => `<li>${item}</li>`).join('')}
-              </ul>
-            ` : ''}
-          </div>
-          ${renderSectionMedia(section.media)}
-        </section>
-      `).join('')}
-    </div>
+    ${renderedSections}
     ${post.quote ? `
       <div class="mwf-glass-card mwf-blog-article__quote" data-page-reveal data-reveal-y="14">
-        <blockquote>"${post.quote.text}"</blockquote>
+        <blockquote>${post.quote.text}</blockquote>
         <strong>${post.quote.attribution}</strong>
       </div>
     ` : ''}
@@ -89,12 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
     ` : ''}
   `;
 
-  tocMount.innerHTML = `
-    <p class="mwf-section-eyebrow">Article map</p>
-    <nav class="mwf-blog-article__toc-nav" aria-label="Article sections">
-      ${contentSections.map((section, index) => `<a href="#${sectionIds[index]}">${section.heading}</a>`).join('')}
-    </nav>
-  `;
+  const tocHeadings = [...articleMain.querySelectorAll('.mwf-blog-article__section h2')];
+
+  if (tocHeadings.length) {
+    tocHeadings.forEach((heading, index) => {
+      if (!heading.closest('.mwf-blog-article__section')?.id) {
+        heading.closest('.mwf-blog-article__section').id = `mwf-blog-section-${index + 1}`;
+      }
+    });
+
+    tocMount.innerHTML = `
+      <p class="mwf-section-eyebrow">Article map</p>
+      <nav class="mwf-blog-article__toc-nav" aria-label="Article sections">
+        ${tocHeadings.map((heading, index) => {
+          const sectionId = heading.closest('.mwf-blog-article__section')?.id || `mwf-blog-section-${index + 1}`;
+          return `<a href="#${sectionId}">${heading.textContent || ''}</a>`;
+        }).join('')}
+      </nav>
+    `;
+  } else {
+    tocMount.remove();
+  }
 
   if (relatedPosts.length) {
     relatedMount.innerHTML = relatedPosts.map((item) => `
