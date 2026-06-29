@@ -1175,7 +1175,7 @@ body.mwf-menu-open {
   display: block;
   min-width: 0;
   max-width: 100%;
-  font-size: clamp(1.35rem, 7vw, 2rem);
+  font-size: inherit;
   line-height: 1.2;
   overflow-wrap: anywhere;
   word-break: break-word;
